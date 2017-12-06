@@ -1,22 +1,33 @@
 package quiz;
 
 public class MyCollection {
-	//1. int[] 필드가 존재해야함.
+	private int[] array;
 	public MyCollection(int[] array) {
-		//2. 전달받은 array를 필드에 저장해야함.
+		this.array = array;
 	}
 	
 	public int sum() {
-		// 3. 필드의 원소를 모두 더한 값을 리턴함.
-		return 1;
+		int result = 0;
+		
+		for (int i : array) {
+			result += i;
+		}
+		
+		return result;
 	}
 	
 	public int max() {
-		// 4. 필드의 원소 중 가장 큰 값을 리턴함.
-		return 1;
+		int result = Integer.MIN_VALUE;
+		for (int i : array) {
+			result = result < i ? i : result;
+		}
+		return result;
 	}
 	public int min() {
-		// 5. 필드의 원소 중 가장 작은 값을 리턴함.
-		return 1;
+		int result = Integer.MAX_VALUE;
+		for (int i : array) {
+			result = result > i ? i : result;
+		}
+		return result;
 	}
 }
