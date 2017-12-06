@@ -18,5 +18,25 @@ public class ClassEx {
 		System.out.println(i2.name);
 		System.out.println(i1.group);
 		System.out.println(i2.group);
+		
+		i1.sayName();
+		i2.sayName();
+		
+		i1.sayGroupName();
+		i2.sayGroupName();
+		NewClass.sayGroupName();
+		
+		
+		NewClass i3 = new NewClass();
+//		i3.name = "웬디";
+		System.out.println(i3.name);
+		System.out.println(i3.number);
+		
+		NewClass i4 = new NewClass("아이린");
+		i4.sayName();
+		
 	}
 }
+
+
+
