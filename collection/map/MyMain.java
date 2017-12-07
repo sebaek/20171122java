@@ -1,6 +1,7 @@
 package collection.map;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -28,6 +29,10 @@ public class MyMain {
 			System.out.println(map2.get(p));
 		}
 		
+		Iterator<String> values = map2.values().iterator();
+		while (values.hasNext()) {
+			System.out.println(values.next());
+		}
 	}
 }
 
